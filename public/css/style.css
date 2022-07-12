@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  flex-direction: column;
+  background-color: white;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+}
+header .heading h1 {
+  font-family: shrikhand;
+}
+
+.explore {
+  flex-direction: column;
+  align-items: center;
+  background-color: #ddd1d1;
+  padding: 20px;
+}
+.explore .explore__paragraph {
+  margin: 25px 0;
+}
+.explore .explore__button {
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  background-color: #FF79DA;
+  width: 50%;
+}
+.explore .explore__button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.fonctionnement {
+  width: 80%;
+  margin: 50px auto;
+  background-color: rgb(207, 204, 204);
+}
+.fonctionnement .buttons-fonctionnement {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.fonctionnement .buttons-fonctionnement__choix {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  background-color: #efefef;
+  border-radius: 20px;
+  width: 25%;
+  padding: 15px;
+}
+.fonctionnement .buttons-fonctionnement__choix p {
+  padding: 0px 10px;
+}
+.fonctionnement .buttons-fonctionnement__compose {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  background-color: #efefef;
+  border-radius: 20px;
+  width: 25%;
+  padding: 15px;
+}
+.fonctionnement .buttons-fonctionnement__compose p {
+  padding: 0px 10px;
+}
+.fonctionnement .buttons-fonctionnement__degustez {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  background-color: #efefef;
+  border-radius: 20px;
+  width: 25%;
+  padding: 15px;
+}
+.fonctionnement .buttons-fonctionnement__degustez p {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.main {
+  background-color: #c2bdbd;
+  height: 100%;
+}
+.main .main__title {
+  padding: 30px;
+}
+
+.cards-restaurants {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__body {
+  height: 30%;
+  display: flex;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 0 0 20px 20px;
+  padding: 10px;
+}
+
+.card-1 {
+  height: 250px;
+  width: 350px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  margin: 20px 30px;
+}
+.card-1 .cards__image {
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+  width: 100%;
+  background-image: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-1 .card1__description {
+  flex: 1;
+}
+.card-1 .card-1__icon {
+  font-size: 20px;
+}
+
+.card-2 {
+  height: 250px;
+  width: 350px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  margin: 20px 30px;
+}
+.card-2 .cards__image {
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+  width: 100%;
+  background-image: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-2 .card2__description {
+  flex: 1;
+}
+.card-2 .card-2__icon {
+  font-size: 20px;
+}
+
+.card-3 {
+  height: 250px;
+  width: 350px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  margin: 20px 30px;
+}
+.card-3 .cards__image {
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+  width: 100%;
+  background-image: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-3 .card3__description {
+  flex: 1;
+}
+.card-3 .card-3__icon {
+  font-size: 20px;
+}
+
+.card-4 {
+  height: 250px;
+  width: 350px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  margin: 20px 30px;
+}
+.card-4 .cards__image {
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+  width: 100%;
+  background-image: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-4 .card4__description {
+  flex: 1;
+}
+.card-4 .card-4__icon {
+  font-size: 20px;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #ffffff;
+}
+.footer .footer-container {
+  padding: 20px;
+}
+.footer .footer__list {
+  padding: 20px;
+}
+.footer .footer__list li {
+  list-style: none;
+  padding: 10px;
+}
+.footer .footer__list i {
+  padding-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
