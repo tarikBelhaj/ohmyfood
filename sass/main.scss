@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 }
-$primary-colour:#9356DC;
+$primary-colour:rgb(147, 86, 220);
 $secondary-colour:#FF79DA;
 $tertiary-colour:#99E2D0;
 body{
@@ -40,7 +40,7 @@ header{
     .explore__paragraph{
         margin: 25px 0;
     }
-    .explore__button{
+    .explore .explore__button{
         
         align-items: center;
         justify-content: center;
@@ -48,6 +48,12 @@ header{
         border-radius: 20px;
         background-color: $secondary-colour;
         width: 50%;
+        transform: scale(1);
+        transition: transform 1s;
+        &:hover{
+            transform: scale(1.15);
+            background-color: darkblue;
+        }
         & p{ display: flex;
             justify-content: center;
             align-items: center;
@@ -226,4 +232,5 @@ header{
             padding-right: 5px;
         }
     }
+    
 }

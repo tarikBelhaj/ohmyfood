@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500&family=Shrikhand&display=swap');
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +13,9 @@ body {
   flex-direction: column;
   background-color: white;
   min-height: 100vh;
+}
+p , h1 , h2, h3 , h4{
+  font-family: roboto;
 }
 
 header {
@@ -43,7 +50,7 @@ header .heading h1 {
   border: 5px solid rgba(0, 0, 0, 0);
   border-radius: 20px;
   background-color: #FF79DA;
-  width: 50%;
+  width: 100%;
 }
 .explore .explore__button p {
   display: flex;
@@ -229,5 +236,108 @@ header .heading h1 {
 .footer .footer__list i {
   padding-right: 5px;
 }
-
+@media (max-width: 767px) and (min-width: 350px){
+  header .heading{
+    width: 100%;
+    margin: 0;
+  }
+  header .heading p{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .heading{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  .loc{
+   background-color: grey;
+   width: 100%;
+  }
+  .card-1__city{
+    font-weight: 100;
+  }
+  .explore {
+    width: 100%;
+    background: #f0ecec;
+    padding: 30px;
+  }
+  .explore__title{
+    text-align: center;
+  }
+  .explore .explore__paragraph {
+    text-align: center;
+  }
+  .explore .explore__paragraph p{
+    font-weight: 100;
+  }
+  .explore .explore__button{
+    width: 200px;
+    padding: 15px 0;
+    border-radius: 50px;
+    margin-left: 25%;
+  }
+.fonctionnement{
+  width: 100%;
+  background-color: #fff;
+}
+.title-fonctionnement{
+  padding: 20px;
+}
+  .buttons-fonctionnement{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .fonctionnement .buttons-fonctionnement__choix{
+    width: 90%;
+    margin: 20px;
+  }
+  .fonctionnement .buttons-fonctionnement__compose{
+    width: 90%;
+    margin: 20px;
+  }
+  .fonctionnement .buttons-fonctionnement__degustez{
+    width: 90%;
+    margin: 20px;
+  }
+  .main{
+    background-color: #f3eaea;
+  }
+.card-1{
+  width: 100%;
+}
+.card-1__city{
+  font-weight: 100;
+}
+.card-2{
+  width: 100%;
+}
+.card-2__city{
+  font-weight: 100;
+}
+.card-3{
+  width: 100%;
+}
+.card-3__city{
+  font-weight: 100;
+}
+.card-4{
+  width: 100%;
+}
+.card-4__city{
+  font-weight: 100;
+}
+.footer{
+  background-color: black;
+  color: #fff;
+}
+ul{
+  font-family: roboto;
+}
+}
 /*# sourceMappingURL=style.css.map */

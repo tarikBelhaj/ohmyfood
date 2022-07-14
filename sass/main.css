@@ -65,7 +65,7 @@ header .heading h1 {
   margin: 25px 0;
 }
 
-.explore .explore__button {
+.explore .explore .explore__button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,9 +76,21 @@ header .heading h1 {
   border-radius: 20px;
   background-color: #FF79DA;
   width: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
-.explore .explore__button p {
+.explore .explore .explore__button:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  background-color: darkblue;
+}
+
+.explore .explore .explore__button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
