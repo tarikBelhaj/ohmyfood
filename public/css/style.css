@@ -1,21 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&family=Shrikhand&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500&family=Shrikhand&display=swap');
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+h1, h2, h3, p {
+  font-family: roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   flex-direction: column;
   background-color: white;
   min-height: 100vh;
-}
-p , h1 , h2, h3 , h4{
-  font-family: roboto;
 }
 
 header {
@@ -27,56 +28,243 @@ header {
 header .heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: 10px auto;
+  flex-direction: column;
+  width: 100%;
+}
+header .heading .loc {
+  text-align: center;
+  background: #EDEDED;
+  width: 100%;
+}
+header .heading .loc p {
+  padding: 20px;
+}
+header .heading .loc .fa-solid.fa-location-dot {
+  padding: 0 10px;
 }
 header .heading h1 {
   font-family: shrikhand;
 }
 
+.explore__title h2 {
+  padding: 0 60px;
+  font-size: 30px;
+}
+
+.explore__paragraph p {
+  font-size: 25px;
+}
+
+/* Page 1*/
+.heading__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-ar;
+  padding: 10px 0;
+}
+.heading__title i {
+  padding: 0 10px;
+}
+
+.menu {
+  background: #F7F7F7;
+}
+
+.heading-p1__image {
+  width: 100%;
+  height: 90vh;
+  background: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.p1-menu__container {
+  padding: 20px;
+}
+.p1-menu__container .p1-menu__title {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.p1-menu__container .p1-menu__title h2 {
+  font-family: shrikhand;
+}
+.p1-menu__container .p1-entree__title h2 {
+  font-size: 14px;
+  border-bottom: solid #99E2D0;
+  border-bottom-width: thin;
+  padding: 10px 0;
+}
+.p1-menu__container .p1-entree__plats {
+  padding: 20px;
+}
+.p1-menu__container .entree__1 {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.p1-menu__container .entree__2 {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.p1-menu__container .entree__3 {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.p1-menu__container .menu-plats__title h3 {
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: solid #99E2D0;
+}
+.p1-menu__container .menu-plats__list {
+  padding: 20px;
+}
+.p1-menu__container .menu-plats__list .menu-plats__list__body {
+  background: #fff;
+  border-radius: 20px;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p1-menu__container .menu-plats__list .menu-plats__list__body h2 {
+  padding-bottom: 10px;
+}
+.p1-menu__container .menu-desserts__title h2 {
+  border-bottom: 2px solid #99E2D0;
+  padding: 10px 0;
+}
+.p1-menu__container .menu-desserts__container {
+  padding: 20px;
+}
+.p1-menu__container .menu-desserts__container .menu-desserts__body {
+  background: #fff;
+  margin: 15px 0;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p1-menu__container .button {
+  display: flex;
+  justify-content: center;
+}
+.p1-menu__container .btn {
+  width: 30%;
+  font-size: 20px;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  background-color: #FF79DA;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 250ms;
+  border-radius: 20px;
+}
+.p1-menu__container .btn:hover::after {
+  opacity: 1;
+}
+.p1-menu__container .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 20px;
+}
+
 .explore {
   flex-direction: column;
   align-items: center;
-  background-color: #ddd1d1;
+  background-color: #F7F7F7;
   padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 .explore .explore__paragraph {
   margin: 25px 0;
 }
-.explore .explore__button {
-  align-items: center;
-  justify-content: center;
-  border: 5px solid rgba(0, 0, 0, 0);
-  border-radius: 20px;
-  background-color: #FF79DA;
-  width: 100%;
+.explore .explore__paragraph p {
+  font-size: 20px;
+  font-weight: 200;
+  padding: 0 30px;
 }
-.explore .explore__button p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.explore-btn {
+  border: none;
+  background: #FF79DA;
+  padding: 15px;
   color: #fff;
+  font-family: roboto;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.explore-btn p {
+  font-size: 18px;
+}
+.explore-btn:hover::after {
+  opacity: 1;
+}
+.explore-btn::after {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms;
 }
 
 .fonctionnement {
-  width: 80%;
-  margin: 50px auto;
-  background-color: rgb(207, 204, 204);
+  background-color: #ffffff;
+  padding: 20px;
+}
+.fonctionnement li::marker {
+  border-radius: 30px;
+  background: rebeccapurple;
 }
 .fonctionnement .buttons-fonctionnement {
+  padding: 20px;
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
   width: 100%;
+  flex-direction: column;
 }
 .fonctionnement .buttons-fonctionnement__choix {
   display: flex;
   align-items: center;
   width: 150px;
-  background-color: #efefef;
+  background-color: #F7F7F7;
   border-radius: 20px;
-  width: 25%;
+  width: 100%;
   padding: 15px;
 }
 .fonctionnement .buttons-fonctionnement__choix p {
@@ -86,10 +274,11 @@ header .heading h1 {
   display: flex;
   align-items: center;
   width: 150px;
-  background-color: #efefef;
+  background-color: #F7F7F7;
   border-radius: 20px;
-  width: 25%;
+  width: 100%;
   padding: 15px;
+  margin: 20px 0;
 }
 .fonctionnement .buttons-fonctionnement__compose p {
   padding: 0px 10px;
@@ -98,9 +287,9 @@ header .heading h1 {
   display: flex;
   align-items: center;
   width: 150px;
-  background-color: #efefef;
+  background-color: #F7F7F7;
   border-radius: 20px;
-  width: 25%;
+  width: 100%;
   padding: 15px;
 }
 .fonctionnement .buttons-fonctionnement__degustez p {
@@ -110,8 +299,9 @@ header .heading h1 {
 }
 
 .main {
-  background-color: #c2bdbd;
+  background-color: #F7F7F7;
   height: 100%;
+  padding: 20px;
 }
 .main .main__title {
   padding: 30px;
@@ -119,7 +309,7 @@ header .heading h1 {
 
 .cards-restaurants {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .cards__body {
@@ -131,12 +321,19 @@ header .heading h1 {
   padding: 10px;
 }
 
+.card__favorite {
+  font-size: 30px;
+  font-weight: 100;
+}
+.card__favorite:active {
+  background: #fc0536;
+}
+
 .card-1 {
   height: 250px;
-  width: 350px;
-  background-color: cadetblue;
+  width: 100%;
+  padding: 20px;
   border-radius: 20px;
-  margin: 20px 30px;
 }
 .card-1 .cards__image {
   border-radius: 20px 20px 0 0;
@@ -155,10 +352,9 @@ header .heading h1 {
 
 .card-2 {
   height: 250px;
-  width: 350px;
-  background-color: cadetblue;
+  width: 100%;
+  padding: 20px;
   border-radius: 20px;
-  margin: 20px 30px;
 }
 .card-2 .cards__image {
   border-radius: 20px 20px 0 0;
@@ -177,10 +373,9 @@ header .heading h1 {
 
 .card-3 {
   height: 250px;
-  width: 350px;
-  background-color: cadetblue;
+  width: 100%;
+  padding: 20px;
   border-radius: 20px;
-  margin: 20px 30px;
 }
 .card-3 .cards__image {
   border-radius: 20px 20px 0 0;
@@ -199,10 +394,9 @@ header .heading h1 {
 
 .card-4 {
   height: 250px;
-  width: 350px;
-  background-color: cadetblue;
+  width: 100%;
   border-radius: 20px;
-  margin: 20px 30px;
+  padding: 20px;
 }
 .card-4 .cards__image {
   border-radius: 20px 20px 0 0;
@@ -221,123 +415,37 @@ header .heading h1 {
 
 .footer {
   margin-top: auto;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #422a2a;
 }
 .footer .footer-container {
   padding: 20px;
+}
+.footer .footer-container h2 {
+  font-family: shrikhand;
 }
 .footer .footer__list {
   padding: 20px;
 }
 .footer .footer__list li {
+  display: flex;
+  align-items: center;
+  font-family: roboto;
   list-style: none;
   padding: 10px;
 }
 .footer .footer__list i {
   padding-right: 5px;
 }
-@media (max-width: 767px) and (min-width: 350px){
-  header .heading{
-    width: 100%;
-    margin: 0;
-  }
-  header .heading p{
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .heading{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-  }
-  .loc{
-   background-color: grey;
-   width: 100%;
-  }
-  .card-1__city{
-    font-weight: 100;
-  }
-  .explore {
-    width: 100%;
-    background: #f0ecec;
-    padding: 30px;
-  }
-  .explore__title{
-    text-align: center;
-  }
-  .explore .explore__paragraph {
-    text-align: center;
-  }
-  .explore .explore__paragraph p{
-    font-weight: 100;
-  }
-  .explore .explore__button{
-    width: 200px;
-    padding: 15px 0;
-    border-radius: 50px;
-    margin-left: 25%;
-  }
-.fonctionnement{
-  width: 100%;
-  background-color: #fff;
+
+.progress__bar {
+  transform: scaleX(0);
 }
-.title-fonctionnement{
-  padding: 20px;
-}
-  .buttons-fonctionnement{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+@media screen and (min-width: 768px) {
+  .buttons-fonctionnement {
+    width: 50%;
   }
-  .fonctionnement .buttons-fonctionnement__choix{
-    width: 90%;
-    margin: 20px;
-  }
-  .fonctionnement .buttons-fonctionnement__compose{
-    width: 90%;
-    margin: 20px;
-  }
-  .fonctionnement .buttons-fonctionnement__degustez{
-    width: 90%;
-    margin: 20px;
-  }
-  .main{
-    background-color: #f3eaea;
-  }
-.card-1{
-  width: 100%;
 }
-.card-1__city{
-  font-weight: 100;
-}
-.card-2{
-  width: 100%;
-}
-.card-2__city{
-  font-weight: 100;
-}
-.card-3{
-  width: 100%;
-}
-.card-3__city{
-  font-weight: 100;
-}
-.card-4{
-  width: 100%;
-}
-.card-4__city{
-  font-weight: 100;
-}
-.footer{
-  background-color: black;
-  color: #fff;
-}
-ul{
-  font-family: roboto;
-}
-}
+
 /*# sourceMappingURL=style.css.map */
