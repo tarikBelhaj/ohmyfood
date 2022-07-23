@@ -19,6 +19,126 @@ body{
     background-color: #ffff ;
     min-height: 100vh;
 }
+/*creation loader*/
+.chargement{
+    position: absolute;
+    z-index: 2;
+    background: $tertiary-colour;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+    animation: disappear 6s forwards;
+    animation-delay: 4s;
+}
+.lettre{
+    color: $tertiary-colour;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 2.2S linear infinite;
+    animation-delay: 6s;
+    
+}
+@keyframes flash{
+    0%{
+        color: $secondary-colour;
+        text-shadow: 0 0 7px $secondary-colour;
+        transform: scale(1);
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: $secondary-colour;
+        text-shadow: 0 0 7px $secondary-colour;
+        transform: scale(0);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+    
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay: 1s;
+}
+/*disparition du loader*/
+@keyframes disappear{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.75);
+        border-radius: 100%;
+    }
+    50%{
+        transform: scale(0.5);
+        border-radius: 100%;
+    }
+    75%{
+        transform: scale(0.25);
+        border-radius: 100%;
+    }
+    100%{
+        transform: scale(0);
+        border-radius: 100%;
+        
+    }
+}
+.spinner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: 10px solid $primary-colour;
+    border-top: 10px solid $secondary-colour;
+    border-bottom: 10px solid $secondary-colour;
+    border-right: 10px solid $secondary-colour;
+    border-radius: 50%;
+    width: 100px ;
+    height: 100px;
+    -webkit-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite ;
+    animation: spin 1.5s linear infinite;
+    margin: auto;
+    position: absolute;
+    top: 10;left: 0;right: 0;bottom: 0;
+}
+/*animation loader*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 header{
     display: flex;
@@ -45,7 +165,6 @@ header{
             font-family: shrikhand;
         }
     }
-    
 }
 .explore__title h2{
     padding: 0 60px;
@@ -58,21 +177,29 @@ header{
 .heading__title{
     display: flex;
     align-items: center;
-    justify-content: space-ar;
     padding: 10px 0;
     & i{
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        color: #000;
+        font-size: 20px;
         padding: 0 10px;
+        align-items: center;
     }
 }
 .menu{
+    margin-top: -20px;
+    border-radius: 25px;
     background: #F7F7F7;
 }
 .heading-p1__image{
     width: 100%;
     height: 90vh;
     background: url(/Users/macook/Desktop/openclassroom/ohmyfood/public/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
+    z-index: -1;
 }
 .p1-menu__container{
     padding: 20px;
@@ -83,49 +210,91 @@ header{
     & h2{
 font-family: shrikhand;
     }
+    .fa-regular.fa-heart{
+        font-size: 25px;
+    }
+    .full{
+        display: none;
+    }
+    &:hover{
+        .full{
+            display: flex;
+        }
+        .empty{
+            display: none;
+        }
+        
+    }
 }
-.p1-entree__title h2{
-    font-size: 14px;
-    border-bottom: solid #99E2D0;
-    border-bottom-width: thin;
-    padding: 10px 0;
-    
+.heart-title{
+    display: flex;
 }
+.p1-entree__title {
+    padding: 20px;
+    & h2{
+        padding: 10px 0;
+    }
+}
+.border-bottom{
+    border-bottom: 2px solid #99E2D0;
+    width: 50px;
+    color: #99E2D0;
+    padding-top: 10px;
+}
+
 .p1-entree__plats{
     padding: 20px;
 }
-.entree__1{
-    padding: 20px;
+.entree__body{
     width: 100%;
     display: flex;
     justify-content: space-between;
     background: #fff;
     margin-top: 20px;
     border-radius: 20px;
-}
-.entree__2{
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    margin-top: 20px;
-    border-radius: 20px;
-}
-.entree__3{
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    margin-top: 20px;
-    border-radius: 20px;
-}
-.menu-plats__title h3{
-    padding: 20px;
-    font-size: 14px;
-    border-bottom: solid #99E2D0;
     
+}
+    .entree__price{
+        display: flex;
+        & span{
+            font-size: 25px;
+            padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        }
+        &:hover{
+            .fa-solid.fa-circle-check{
+                display: flex;
+                cursor: pointer;
+            }
+        }
+        .fa-solid.fa-circle-check{
+            display: none;
+            background: $tertiary-colour;
+            color: #fff;
+            height: 70px;
+            width: 60px;
+            border-radius: 0 20px 20px 0;
+            font-size: 25px;
+            align-items: center;
+            padding-left: 15px;
+        }
+    }
+    .entree__name{
+        padding: 15px;
+    }
+}
+.menu-plats__title {
+    padding: 20px;
+
+}
+
+.p1-entree__plats{
+    .price{
+        display: flex;
+        font-size: 20px;
+    }
 }
 .menu-plats__list{
 padding: 20px;
@@ -133,33 +302,100 @@ padding: 20px;
     background: #fff;
     border-radius: 20px;
     margin: 15px 0;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     & h2{
         padding-bottom: 10px;
     }
-    
+    :hover {
+        cursor: pointer;
+        .fa-solid.fa-circle-check{
+            display: flex;
+        }
+        
+    }
 }
 
+.menu-plats__list__description{
+    padding: 10px;
 }
-.menu-desserts__title h2{
-border-bottom: 2px solid #99E2D0;
-padding: 10px 0;
+.menu-plats__list__price{
+    display: flex;
+    .fa-solid.fa-circle-check{
+        display: none;
+        height: 80px;
+        color: #fff;
+        background: $tertiary-colour;
+        width: 70px;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15px;
+        border-radius: 0 20px 20px 0;
+        font-size: 30px;
+    }
+    & span {
+        width: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 20px;
+    }
 }
+
+
+}
+.menu-desserts__title {
+    padding: 20px;
+&h2{
+    padding-bottom: 15px;
+}
+}
+
 .menu-desserts__container{
     padding: 20px;
     .menu-desserts__body{
         background: #fff;
         margin: 15px 0;
         border-radius: 20px;
-        padding: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .menu-desserts__description{
+            padding: 10px;
+        }
     }
 }
+.menu-desserts__price{
+    display: flex;
+    &:hover{
+        .check{
+            display: flex;
+            cursor: pointer;
+        }
+    }
+    & span{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+        font-size: 25px;
+    padding: 0 10px;
+    }
+    & .check{
+    display: none;
+    height: 75px;
+    width: 60px;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+        font-size: 25px;
+        background-color: $tertiary-colour;
+        padding-left: 10px;
+    }
+}
+
 
 $clr-button:#FF79DA;
 .button{
@@ -197,7 +433,7 @@ border-radius: 20px;
     border-radius: 20px;
 }
 }
-}
+
 $clr-button:#FF79DA;
 .explore{
     flex-direction: column;
@@ -276,6 +512,19 @@ $btn-color:$secondary-colour;
         & p{
             padding: 0px 10px;
         }
+
+    }
+    .number{
+        position: absolute;
+    color: #fff;
+    left: 20px;
+    background-color: $primary-colour;
+    padding: 5px;
+    border-radius: 200px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
     }
     .buttons-fonctionnement__compose{
         display: flex;
@@ -313,9 +562,16 @@ $btn-color:$secondary-colour;
         padding: 30px;
     }
 }
+.link-card{
+margin: 10px 0;
+}
 .cards-restaurants{
     display: flex;
     flex-direction: column;
+}
+
+#card{
+    padding: 0;
 }
 .cards__body{
     height: 30%;
@@ -328,11 +584,26 @@ $btn-color:$secondary-colour;
 .card__favorite{
     font-size: 30px;
     font-weight: 100;
-    &:active{
-        background: #fc0536;
-        
+    &:hover{
+        .fa-regular.fa-heart.empty{
+display: none;
+        }
+        .fa-solid.fa-heart.full{
+            display: flex;
+            color: red;
+        }
     }
+    .fa-solid.fa-heart.full{
+        display: none;
+    }
+    
 }
+.full{
+    font-size: 25px;
+    color: red;
+}
+
+
 .card-1{
     height: 250px ;
     width:100%;
@@ -442,8 +713,32 @@ $btn-color:$secondary-colour;
     }
 }
 @media screen and (min-width:768px ) {
-    .buttons-fonctionnement{
-       width: 50%;
-
+    header .heading{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        .loc{
+            width: 25%;
+            background: #FFF;
+        }
+    }
+   .fonctionnement .buttons-fonctionnement{
+flex-direction: row;
+    }
+    .fonctionnement .buttons-fonctionnement__choix{
+        border-radius: 200px;
+    }
+    .fonctionnement .buttons-fonctionnement__compose{
+        margin: 0 15px;
+    }
+    .link-card{
+        padding: 15px;
+        width: 25%;
+    }
+    .cards-restaurants{
+        flex-direction: row;
+    }
+    .footer__list ul{
+        display: flex;
     }
 }

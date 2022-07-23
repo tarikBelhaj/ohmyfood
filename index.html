@@ -14,6 +14,19 @@
     <script src="https://kit.fontawesome.com/332bcf3a03.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="chargement">
+        <div class="spinner"></div>
+        <span class="lettre">C</span>
+        <span class="lettre">H</span>
+        <span class="lettre">A</span>
+        <span class="lettre">R</span>
+        <span class="lettre">G</span>
+        <span class="lettre">E</span>
+        <span class="lettre">M</span>
+        <span class="lettre">E</span>
+        <span class="lettre">N</span>
+        <span class="lettre">T</span>
+    </div>
     <header>
         <div class="heading">
             <div class="heading__title"><h1>ohmyfood</h1></div>
@@ -34,16 +47,16 @@
     <div class="fonctionnement">
         <div class="fonctionnement__title"><h1>Fonctionnement</h1></div>
         <div class="buttons-fonctionnement">
-            <span><i class="fa-solid fa-circle-2"></i></span><div class="buttons-fonctionnement__choix"><i class="fa-solid fa-mobile-screen-button"></i><p>Choisissez un restaurant</p></div>
-            <div class="buttons-fonctionnement__compose"><i class="fa-solid fa-circle-2"></i><i class="fa-solid fa-bars"></i><p>Composez votre menu</p></div>
-            <div class="buttons-fonctionnement__degustez"><i class="fa-solid fa-store"></i><p>Dégustez au restaurant</p></div>
+            <div class="buttons-fonctionnement__choix"> <span class="number">1</span> <i class="fa-solid fa-mobile-screen-button"></i><p>Choisissez un restaurant</p></div>
+            <div class="buttons-fonctionnement__compose"><span class="number">2</span><i class="fa-solid fa-circle-2"></i><i class="fa-solid fa-bars"></i><p>Composez votre menu</p></div>
+            <div class="buttons-fonctionnement__degustez"><span class="number">3</span><i class="fa-solid fa-store"></i><p>Dégustez au restaurant</p></div>
         </div>
     </div>
     <section class="main">
         <div class="main__title"><h1>Restaurants</h1></div>
         <div class="cards-restaurants">
-        <a href="page1.html">
-            <div class="card-1">
+        <a href="page1.html" class="link-card"  >
+            <div class="card-1 card" id="card" >
                 <div class="cards__image"></div>
                 <div class="cards__body">
                     <div class="card1__description">
@@ -51,12 +64,13 @@
                         <div class="card-1__city"><p>Ménilmontant</p></div>
                     </div>       
                     <div class="card-1__icon">
-                    <div class="card__favorite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__favorite"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></div>
                     </div>
                 </div> 
             </div>
         </a>
-            <div class="card-2">
+        <a href="page2.html" class="link-card" >
+            <div class="card-2 card"id="card">
                 <div class="cards__image"></div>
                 <div class="cards__body">
                     <div class="card2__description">
@@ -64,12 +78,13 @@
                         <div class="card-2__city"><p>Charonne</p></div>
                     </div>       
                     <div class="card-2__icon">
-                    <div class="card__favorite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__favorite"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></div>
                     </div>
                 </div> 
             </div>
-        <a href="page3.html">
-            <div class="card-3">
+        </a>   
+        <a href="page3.html" class="link-card" >
+            <div class="card-3" id="card" >
                 <div class="cards__image"></div>
                 <div class="cards__body">
                     <div class="card3__description">
@@ -77,12 +92,13 @@
                         <div class="card-3__city"><p>Cité rouge</p></div>
                     </div>       
                     <div class="card-3__icon">
-                    <div class="card__favorite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__favorite"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></div>
                     </div>
                 </div> 
             </div>
         </a>
-            <div class="card-4">
+        <a href="page4.html" class="link-card">
+            <div class="card-4 " id="card">
                 <div class="cards__image"></div>
                 <div class="cards__body">
                     <div class="card4__description">
@@ -90,10 +106,11 @@
                         <div class="card-4__city"><p>Folie méricourt</p></div>
                     </div>       
                     <div class="card-4__icon">
-                    <div class="card__favorite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__favorite"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></div>
                     </div>
                 </div> 
             </div>
+        </a>
         </div>
         
     </section>
