@@ -1,0 +1,34 @@
+.footer {
+  margin-top: auto;
+  color: #fff;
+  background-color: #422a2a;
+}
+
+.footer .footer-container {
+  padding: 20px;
+}
+
+.footer .footer-container h2 {
+  font-family: shrikhand;
+}
+
+.footer .footer__list {
+  padding: 20px;
+}
+
+.footer .footer__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: roboto;
+  list-style: none;
+  padding: 10px;
+}
+
+.footer .footer__list i {
+  padding-right: 5px;
+}
+/*# sourceMappingURL=footer.css.map */

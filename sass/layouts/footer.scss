@@ -1,0 +1,24 @@
+
+.footer{
+    margin-top: auto;
+    color: #fff;
+    background-color: #422a2a;
+    .footer-container{
+        padding: 20px;
+        & h2{
+            font-family: shrikhand;
+        }
+    }
+    .footer__list{
+        padding: 20px;
+        & li{display: flex;
+            align-items: center;
+            font-family: roboto;
+            list-style: none;
+            padding: 10px;
+        }
+        & i{
+            padding-right: 5px;
+        }   
+    }
+}
