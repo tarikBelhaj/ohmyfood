@@ -525,6 +525,37 @@ header .heading h1 {
   transition: all 1s;
 }
 
+.menu__container .card__body:hover .check i {
+  -webkit-animation: check-rotation;
+          animation: check-rotation;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes check-rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check-rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .menu__container .card__body .card__description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,11 +610,6 @@ header .heading h1 {
           align-items: center;
   color: #fff;
   background-color: #99E2D0;
-}
-
-.menu__container .card__body .check i {
-  -webkit-animation: spin .5s infinite;
-          animation: spin .5s infinite;
 }
 
 .menu__container .entrees {

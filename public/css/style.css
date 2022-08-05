@@ -366,6 +366,19 @@ header .heading h1 {
   margin-right: 0;
   transition: all 1s;
 }
+.menu__container .card__body:hover .check i {
+  animation: check-rotation;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+}
+@keyframes check-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .menu__container .card__body .card__description {
   display: flex;
   padding: 15px;
@@ -399,9 +412,6 @@ header .heading h1 {
   align-items: center;
   color: #fff;
   background-color: #99E2D0;
-}
-.menu__container .card__body .check i {
-  animation: spin 0.5s infinite;
 }
 .menu__container .entrees {
   opacity: 0;
