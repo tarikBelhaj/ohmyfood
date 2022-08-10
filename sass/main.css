@@ -455,7 +455,6 @@ header .heading h1 {
 
 .menu__container {
   padding: 20px;
-  /* Animation apparition*/
 }
 
 .menu__container .menu__title {
@@ -472,12 +471,18 @@ header .heading h1 {
   font-family: shrikhand;
 }
 
-.menu__container .menu__title .fa-regular.fa-heart {
+.menu__container .menu__title .empty {
   font-size: 25px;
 }
 
 .menu__container .menu__title .full {
   display: none;
+  font-size: 25px;
+  color: #FF79DA;
+}
+
+.menu__container .menu__title:hover {
+  cursor: pointer;
 }
 
 .menu__container .menu__title:hover .full {
@@ -490,20 +495,46 @@ header .heading h1 {
   display: none;
 }
 
-.menu__container .heart-title {
+@-webkit-keyframes heart-ok {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heart-ok {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.entree__title {
+  margin-top: 30px;
+}
+
+.heart-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.menu__container .border-bottom {
+.border-bottom {
   border-bottom: 2px solid #99E2D0;
   width: 50px;
   color: #99E2D0;
   padding-top: 10px;
 }
 
-.menu__container .card__body {
+.card__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,13 +550,13 @@ header .heading h1 {
   cursor: pointer;
 }
 
-.menu__container .card__body:hover .check {
+.card__body:hover .check {
   margin-right: 0;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-.menu__container .card__body:hover .check i {
+.card__body:hover .check i {
   -webkit-animation: check-rotation;
           animation: check-rotation;
   -webkit-animation-delay: 0s;
@@ -556,7 +587,7 @@ header .heading h1 {
   }
 }
 
-.menu__container .card__body .card__description {
+.card__body .card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,11 +602,11 @@ header .heading h1 {
   padding: 15px;
 }
 
-.menu__container .card__body .card__description p {
+.card__body .card__description p {
   margin-top: 20px;
 }
 
-.menu__container .card__body .card__price {
+.card__body .card__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,7 +616,7 @@ header .heading h1 {
   height: 100%;
 }
 
-.menu__container .card__body .card__price span {
+.card__body .card__price span {
   font-size: 25px;
   padding: 15px;
   padding-right: 30px;
@@ -593,7 +624,7 @@ header .heading h1 {
   font-family: 'Roboto';
 }
 
-.menu__container .card__body .check {
+.card__body .check {
   margin-right: -100px;
   font-size: 25px;
   height: 100%;
@@ -612,59 +643,60 @@ header .heading h1 {
   background-color: #99E2D0;
 }
 
-.menu__container .entrees {
+/* Animation apparition*/
+.entrees {
   opacity: 0;
 }
 
-.menu__container .entrees:nth-child(1) {
+.entrees:nth-child(1) {
   -webkit-animation: appears 1s 1s forwards;
           animation: appears 1s 1s forwards;
 }
 
-.menu__container .entrees:nth-child(2) {
+.entrees:nth-child(2) {
   -webkit-animation: appears 1s 1.5s forwards;
           animation: appears 1s 1.5s forwards;
 }
 
-.menu__container .entrees:nth-child(3) {
+.entrees:nth-child(3) {
   -webkit-animation: appears 1s 2s forwards;
           animation: appears 1s 2s forwards;
 }
 
-.menu__container .plats {
+.plats {
   opacity: 0;
 }
 
-.menu__container .plats:nth-child(1) {
+.plats:nth-child(1) {
   -webkit-animation: appears 1s 2.5s forwards;
           animation: appears 1s 2.5s forwards;
 }
 
-.menu__container .plats:nth-child(2) {
+.plats:nth-child(2) {
   -webkit-animation: appears 1s 3s forwards;
           animation: appears 1s 3s forwards;
 }
 
-.menu__container .plats:nth-child(3) {
+.plats:nth-child(3) {
   -webkit-animation: appears 1s 3.5s forwards;
           animation: appears 1s 3.5s forwards;
 }
 
-.menu__container .desserts {
+.desserts {
   opacity: 0;
 }
 
-.menu__container .desserts:nth-child(1) {
+.desserts:nth-child(1) {
   -webkit-animation: appears 1s 4s forwards;
           animation: appears 1s 4s forwards;
 }
 
-.menu__container .desserts:nth-child(2) {
+.desserts:nth-child(2) {
   -webkit-animation: appears 1s 4.5s forwards;
           animation: appears 1s 4.5s forwards;
 }
 
-.menu__container .desserts:nth-child(3) {
+.desserts:nth-child(3) {
   -webkit-animation: appears 1s 5s forwards;
           animation: appears 1s 5s forwards;
 }
@@ -679,10 +711,6 @@ header .heading h1 {
   100% {
     opacity: 1;
   }
-}
-
-.menu-plats__title {
-  padding: 20px;
 }
 
 /* page index */
@@ -836,15 +864,14 @@ header .heading h1 {
 }
 
 /*heart*/
-.full {
-  font-size: 25px;
-  color: #FF79DA;
+/*
+.full{
+    font-size: 25px;
+    color: $secondary-colour;
 }
-
-.empty {
-  font-size: 25px;
-}
-
+.empty{
+    font-size: 25px;
+}*/
 .badge {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -905,34 +932,70 @@ header .heading h1 {
     padding: 15px;
     width: 25%;
   }
+  .menu__container .menu__title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .h2__title h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+    font-size: 40px;
+  }
+  .menu__container .border-bottom {
+    width: 100%;
+  }
   .cards-restaurants {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .entree__plats {
+  .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px 0;
   }
-  .menu-plats__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .menu-desserts__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .menu-desserts__container .button {
+  .menu__list .button {
     width: 100%;
   }
   .menu__container .card__body {
     width: 300px;
     height: 200px;
-    margin: 20px;
+    margin-left: 10px;
+  }
+  .menu__container .card__body h3 {
+    font-size: 15px;
+  }
+  .menu__container .card__body:hover h3 {
+    font-size: 16px;
+  }
+  .menu__container .card__body .card__description {
+    padding: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menu__container .card__body .card__description h2 {
+    font-size: 18px;
+  }
+  .menu__container .card__body .card__price span {
+    padding: 10px;
+  }
+  .menu__container .card__body .check {
+    width: 50px;
+    margin-right: -50px;
   }
   .footer__list ul {
     display: -webkit-box;
@@ -941,6 +1004,18 @@ header .heading h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrap > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
   }
 }
 /*# sourceMappingURL=main.css.map */
