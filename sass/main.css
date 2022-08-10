@@ -911,6 +911,29 @@ header .heading h1 {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .entree__plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-plats__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-desserts__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-desserts__container .button {
+    width: 100%;
+  }
+  .menu__container .card__body {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+  }
   .footer__list ul {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -139,23 +139,47 @@ header{
     & h2{
 font-family: shrikhand;
     }
-    .fa-regular.fa-heart{
+    .empty{
         font-size: 25px;
+        
+       
     }
     .full{
         display: none;
+        font-size: 25px;
+        color: $clr-button;
     }
+    
     &:hover{
+        cursor: pointer;
+        
         .full{
-            display: flex;
+         display: flex;
+            
         }
         .empty{
             display: none;
         }
     }
 }
+@keyframes heart-ok {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+    
+}
+
+
+.entree__title{
+    margin-top: 30px;
+}
 .heart-title{
     display: flex;
+    flex-direction: column;
 }
 .border-bottom{
     border-bottom: 2px solid #99E2D0;
@@ -270,11 +294,8 @@ font-family: shrikhand;
         opacity: 1;
     }
 }
-}
 
-.menu-plats__title {
-    padding: 20px;
-}
+
  
  /* page index */
 $clr-button:#FF79DA;
@@ -400,13 +421,14 @@ display: none;
     
 }
 /*heart*/
+/*
 .full{
     font-size: 25px;
     color: $secondary-colour;
 }
 .empty{
     font-size: 25px;
-}
+}*/
 .badge{
     display: flex;
     justify-content: center;
@@ -451,11 +473,72 @@ flex-direction: row;
         padding: 15px;
         width: 25%;
     }
+    .menu__container .menu__title {
+        justify-content: space-around;
+    }
+    .h2__title h2{
+display: flex;
+justify-content: center;
+padding: 20px;
+font-size: 40px;
+    }
+    .menu__container .border-bottom{
+        width: 100%;
+    }
     .cards-restaurants{
         flex-direction: row;
     }
+    .menu__list{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0;
+        .button {
+            width: 100%;
+        }
+    }
+
+    .menu__container .card__body{
+        width: 300px;
+        height: 200px;
+        margin-left: 10px;
+        & h3{
+            font-size: 15px;
+        }
+        &:hover{
+            h3{
+                font-size: 16px;
+            }
+            }
+        .card__description{
+            padding: 0;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-top: 15px;
+            justify-content: flex-start;
+            & h2{
+                font-size: 18px;
+            }
+        } 
+        .card__price span {
+            padding: 10px;
+        }
+        .check{
+            width: 50px;
+            margin-right: -50px;
+        }
+        
+        }
+        
+        
     .footer__list ul{
         display: flex;
         justify-content: space-between;
+    }
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .wrap>* {
+        flex: 0 0 33%;
     }
 }
