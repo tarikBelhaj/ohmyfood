@@ -258,8 +258,8 @@ body {
   width: 100%;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-animation: disappear 4s forwards;
-          animation: disappear 4s forwards;
+  -webkit-animation: disappear 1s forwards;
+          animation: disappear 1s forwards;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
@@ -820,7 +820,7 @@ header .heading h1 {
 }
 
 .card-1 .cards__image {
-  background-image: url(../public/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
