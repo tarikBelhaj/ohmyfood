@@ -190,7 +190,7 @@ body {
   width: 100%;
   transform-origin: bottom;
   animation: disappear 1s forwards;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 /*disparition du loader*/

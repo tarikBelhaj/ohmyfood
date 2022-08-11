@@ -260,8 +260,8 @@ body {
           transform-origin: bottom;
   -webkit-animation: disappear 1s forwards;
           animation: disappear 1s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 /*disparition du loader*/
