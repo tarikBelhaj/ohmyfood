@@ -436,29 +436,25 @@ header .heading h1 {
 }
 
 .heading-p2__image {
-  background: url(../public/img/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background: url(../img/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .heading-p3__image {
-  background: url(../public/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background: url(../img/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .heading-p4__image {
-  background: url(../public/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.menu__container {
-  padding: 20px;
-}
-
-.menu__container .menu__title {
-  padding: 20px 0;
+.menu__title {
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,52 +463,98 @@ header .heading h1 {
           justify-content: space-between;
 }
 
-.menu__container .menu__title h2 {
+.menu__title h2 {
   font-family: shrikhand;
 }
 
-.menu__container .menu__title .empty {
-  font-size: 25px;
+.menu__title .menu__container {
+  padding: 20px;
+  /*
+    &:hover{
+        .full{
+         display: flex;
+            cursor: pointer;
+        }
+        .empty{
+            display: none;
+        }
+    }*/
 }
 
-.menu__container .menu__title .full {
-  display: none;
-  font-size: 25px;
-  color: #FF79DA;
-}
-
-.menu__container .menu__title:hover {
-  cursor: pointer;
-}
-
-.menu__container .menu__title:hover .full {
+.menu__title .menu__container .empty {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 25px;
 }
 
-.menu__container .menu__title:hover .empty {
+.menu__title .menu__container .full {
   display: none;
+  font-size: 25px;
+  color: yellow;
 }
 
-@-webkit-keyframes heart-ok {
-  from {
+.heart-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 80px;
+  width: 50px;
+  height: 50px;
+}
+
+.heart-title .fas {
+  font-size: 44px;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heart-title .far {
+  font-size: 44px;
+  opacity: 1;
+  color: grey;
+  cursor: pointer;
+}
+
+.heart-title .far:hover .fas {
+  -webkit-animation: heart 300ms forwards;
+          animation: heart 300ms forwards;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+}
+
+@-webkit-keyframes heart {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes heart-ok {
-  from {
+@keyframes heart {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
+/*
+@keyframes slideDown{
+    from{
+transform: translateY(-25px);
+opacity: 0;
+    }
+   to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}*/
 .entree__title {
   margin-top: 30px;
 }
@@ -603,7 +645,7 @@ header .heading h1 {
 }
 
 .card__body .card__description p {
-  margin-top: 20px;
+  padding-bottom: 10px;
 }
 
 .card__body .card__price {
@@ -749,7 +791,8 @@ header .heading h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
   opacity: 0;
   z-index: -1;
   -webkit-transition: opacity 250ms;
@@ -856,7 +899,7 @@ header .heading h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #FF79DA;
+  color: yellow;
 }
 
 .card__favorite .fa-solid.fa-heart.full {
@@ -864,14 +907,15 @@ header .heading h1 {
 }
 
 /*heart*/
-/*
-.full{
-    font-size: 25px;
-    color: $secondary-colour;
+.full {
+  font-size: 25px;
+  color: linear-gradient(to top, #FF79DA, #9356DC);
 }
-.empty{
-    font-size: 25px;
-}*/
+
+.empty {
+  font-size: 25px;
+}
+
 .badge {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -932,9 +976,22 @@ header .heading h1 {
     padding: 15px;
     width: 25%;
   }
+  .menu__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 25px;
+  }
   .menu__container .menu__title {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .entree__title {
+    margin-top: 0;
   }
   .h2__title h2 {
     display: -webkit-box;
@@ -956,27 +1013,10 @@ header .heading h1 {
             flex-direction: row;
   }
   .menu__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     padding: 20px 0;
   }
   .menu__list .button {
     width: 100%;
-  }
-  .menu__container .card__body {
-    width: 300px;
-    height: 200px;
-    margin-left: 10px;
-  }
-  .menu__container .card__body h3 {
-    font-size: 15px;
-  }
-  .menu__container .card__body:hover h3 {
-    font-size: 16px;
   }
   .menu__container .card__body .card__description {
     padding: 0;
@@ -990,13 +1030,6 @@ header .heading h1 {
   .menu__container .card__body .card__description h2 {
     font-size: 18px;
   }
-  .menu__container .card__body .card__price span {
-    padding: 10px;
-  }
-  .menu__container .card__body .check {
-    width: 50px;
-    margin-right: -50px;
-  }
   .footer__list ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1004,18 +1037,10 @@ header .heading h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    cursor: pointer;
   }
-  .wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .wrap > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33%;
-            flex: 0 0 33%;
+  .footer__list ul a {
+    color: #fff;
   }
 }
 /*# sourceMappingURL=main.css.map */
