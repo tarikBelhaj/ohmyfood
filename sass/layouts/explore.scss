@@ -23,9 +23,9 @@ $clr-button:#FF79DA;
 $btn-color:$secondary-colour;
 .explore-btn{
     position: relative;
-    padding: 15px;
+    padding: 12px 15px;
     z-index: 1;
-    background: $btn-color;
+    background-image: linear-gradient( #FF79DA, #9356DC);
     border: none;
     border-radius: 30px;
     cursor: pointer;

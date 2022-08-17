@@ -1,0 +1,187 @@
+
+/*--------------------------------------------------ANIMATIONS DU LOADER-----------------------------------------------------------------*/
+
+.chargement{
+    position: fixed;
+    z-index: 2;
+    background: $tertiary-colour;
+    opacity: 0.8;
+    height: 100vh;
+    width: 100%;
+    transform-origin: bottom;
+    animation: disappear 0.5s forwards;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+}
+/*disparition du loader*/
+@keyframes disappear{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+        border-radius: 100%;
+        opacity: 0;
+        width: 500px;
+        height: 500px;
+    }
+}
+/*animation 2*/
+.spinner{
+    display: flex;
+    border: 10px solid $primary-colour;
+    border-top: 10px solid $secondary-colour;
+    border-bottom: 10px solid $secondary-colour;
+    border-right: 10px solid $primary-colour;
+    border-radius: 50%;
+    width: 100px ;
+    height: 100px;
+    animation: spin 0.5s linear infinite;
+    margin: auto;
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    opacity: 1;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+/*animation loader*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation apparition*/
+.entrees{
+    opacity: 0;
+}
+.entrees:nth-child(1){
+    animation: appears 1s 1s forwards;
+}
+.entrees:nth-child(2){
+    animation: appears 1s 1.5s forwards;
+}
+.entrees:nth-child(3){
+    animation: appears 1s 2s forwards;
+}
+.plats{
+    opacity: 0;
+}
+.plats:nth-child(1){
+    animation: appears 1s 2.5s forwards ;
+}
+.plats:nth-child(2){
+    animation: appears 1s 3s forwards ;
+}
+.plats:nth-child(3){
+    animation: appears 1s 3.5s forwards ;
+}
+.desserts{
+    opacity: 0;
+}
+.desserts:nth-child(1){
+    animation: appears 1s 4s forwards ;
+}
+.desserts:nth-child(2){
+    animation: appears 1s 4.5s forwards ;
+}
+.desserts:nth-child(3){
+    animation: appears 1s 5s forwards ;
+}
+@keyframes appears {
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/*-------------------------------------------------------ANIMATION DU COEUR POUR LE TITLE-------------------------------------------------*/
+
+.card__favorite{
+    z-index: 10;
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    &:hover .fas {
+        animation: heart 300ms forwards;
+    background: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+    .fas{
+        font-size: 25px;
+        opacity: 0;
+        background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    }
+    .far{
+        font-size: 25px;
+        opacity: 1;
+        color: black;
+        cursor: pointer;
+        
+    }
+}
+
+@keyframes heart {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.heart-title{
+    display: flex;
+    position: absolute;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    &:hover .fas {
+        animation: heart 300ms forwards;
+    background: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+  }
+    .fas{
+        font-size: 35px;
+        opacity: 1;
+        background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    }
+    .far{
+        font-size: 35px;
+        opacity: 1;
+        color: black;
+        cursor: pointer;
+        
+    }
+      
+  }
+  @keyframes heart {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /*----------------------------------------------------------------ANIMATION HEART-------------------------------------------------------*/
+  .card__favorite{
+    font-size: 30px;
+    font-weight: 100;
+    &:hover{
+        .fas{
+            opacity: 1;
+        }
+} }
