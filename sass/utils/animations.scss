@@ -1,6 +1,5 @@
 
 /*--------------------------------------------------ANIMATIONS DU LOADER-----------------------------------------------------------------*/
-
 .chargement{
     position: fixed;
     z-index: 2;
@@ -53,7 +52,6 @@
         transform: rotate(360deg);
     }
 }
-
 /* Animation apparition*/
 .entrees{
     opacity: 0;
@@ -96,11 +94,7 @@
         opacity: 1;
     }
 }
-
-
-
 /*-------------------------------------------------------ANIMATION DU COEUR POUR LE TITLE-------------------------------------------------*/
-
 .card__favorite{
     z-index: 10;
     display: flex;
@@ -128,7 +122,6 @@
         
     }
 }
-
 @keyframes heart {
     0% {
       opacity: 0;
@@ -165,7 +158,6 @@
         cursor: pointer;
         
     }
-      
   }
   @keyframes heart {
     0% {

@@ -403,33 +403,32 @@ font-size: 22px;
     .card__body{
         height: 80px;
         width: 100%;
-    }
-    .card__body .check{
-        margin-right: -60px;
-    }
-    .card__body .card__description{
-        padding: 0;
-        padding-left: 10px;
-        padding-bottom: 10px;
-        padding-top: 15px;
-        justify-content: flex-start;
-        & h2{
-            font-size: 14px;
+        .card__body .check{
+            margin-right: -60px;
         }
-        p{
-            font-size: 12px;
-  
-         }
-    .card__body:hover{
         .card__description{
-            padding: 10px;
-            align-items: flex-start;
+            padding: 0;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-top: 15px;
+            justify-content: flex-start;
+            & h2{
+                font-size: 14px;
+            }
+            p{
+                font-size: 12px;
+      
+             }
+            }
+        &:hover{
+            .card__description{
+                padding: 10px;
+                align-items: flex-start;
+            }
+
         }
+        
     }
-    .card__body .check {
-        margin-right: -60px;
-    }
-        }
  .footer__list ul{
     display: flex;
     justify-content: space-between;

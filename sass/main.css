@@ -779,7 +779,7 @@ header .heading h1 {
     height: 80px;
     width: 100%;
   }
-  .card__body .check {
+  .card__body .card__body .check {
     margin-right: -60px;
   }
   .card__body .card__description {
@@ -795,12 +795,9 @@ header .heading h1 {
   .card__body .card__description p {
     font-size: 12px;
   }
-  .card__body .card__description .card__body:hover .card__description {
+  .card__body:hover .card__description {
     padding: 10px;
     align-items: flex-start;
-  }
-  .card__body .card__description .card__body .check {
-    margin-right: -60px;
   }
   .footer__list ul {
     display: flex;
