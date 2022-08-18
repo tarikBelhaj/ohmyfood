@@ -34,23 +34,5 @@ $btn-color:$secondary-colour;
         color: #fff;
         font-size: 20px;
     }
-    &:hover{
-        &::after{
-            opacity: 1;
-        }
-    }
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
-        background: radial-gradient(circle,lighten($btn-color,5)0%, darken($btn-color,10)100%);
-        border-radius: 30px;
-    }
-    
 }
 

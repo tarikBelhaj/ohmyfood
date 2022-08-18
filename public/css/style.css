@@ -133,21 +133,6 @@ body {
   color: #fff;
   font-size: 20px;
 }
-.explore-btn:hover::after {
-  opacity: 1;
-}
-.explore-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
-  border-radius: 30px;
-}
 
 /*--------------------------------------------------ANIMATIONS DU LOADER-----------------------------------------------------------------*/
 .chargement {
