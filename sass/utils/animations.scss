@@ -15,7 +15,7 @@
 /*disparition du loader*/
 @keyframes disappear{
     0%{
-        opacity: 1;
+        opacity: 0.8;
     }
     100%{
         transform: scale(0);
@@ -105,6 +105,8 @@
         animation: heart 300ms forwards;
     background: linear-gradient(#9356dc, #ff79da);
     background-clip: text;
+
+    
     -webkit-background-clip: text;
   }
     .fas{

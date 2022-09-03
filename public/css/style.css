@@ -138,7 +138,7 @@ body {
   opacity: 1;
   transition: background-color 250ms;
 }
-.btn p {
+.btn span {
   color: #fff;
   font-size: 20px;
 }
@@ -163,7 +163,7 @@ body {
 /*disparition du loader*/
 @keyframes disappear {
   0% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     transform: scale(0);
@@ -362,7 +362,7 @@ header .heading .loc p {
 header .heading .loc .fa-solid.fa-location-dot {
   padding: 0 10px;
 }
-header .heading h1 {
+header .heading h2 {
   font-family: shrikhand;
 }
 
@@ -562,29 +562,29 @@ header .heading h1 {
   margin: 10px 0;
 }
 
-#card {
+.card {
   padding: 0;
   background: #fff;
   height: 250px;
   width: 100%;
   border-radius: 20px;
 }
-#card .cards__image {
+.card .cards__image {
   display: flex;
   justify-content: flex-end;
   border-radius: 20px 20px 0 0;
   height: 70%;
   width: 100%;
 }
-#card .cards__body {
+.card .cards__body {
   color: #000;
   display: flex;
   padding: 10px;
 }
-#card .cards__description {
+.card .cards__description {
   flex: 1;
 }
-#card .cards__icon {
+.card .cards__icon {
   font-size: 20px;
 }
 
