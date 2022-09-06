@@ -287,7 +287,7 @@ margin: 10px 0;
         font-size: 14px;
     }
 }
-@media (min-width: 768px) and (max-width:992px){
+@media (min-width: 797px) and (max-width:992px){
 
     .fonctionnement {
         .buttons-fonctionnement{
@@ -364,13 +364,13 @@ margin: 10px 0;
         }
     }
 }
+.cards__description p {
+font-size: 14px;
+}
 .card-4__restaurant{
     h3{
         font-size: 16px;
     }
-}
-.card-4__city p {
-    font-size: 12px ;
 }
 .btn{
     width: 30%;

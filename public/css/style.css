@@ -630,7 +630,7 @@ header .heading h2 {
   font-size: 14px;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 797px) and (max-width: 992px) {
   .fonctionnement .buttons-fonctionnement {
     flex-direction: row;
   }
@@ -694,11 +694,11 @@ header .heading h2 {
   .card__body:hover span {
     padding-right: 15px;
   }
+  .cards__description p {
+    font-size: 14px;
+  }
   .card-4__restaurant h3 {
     font-size: 16px;
-  }
-  .card-4__city p {
-    font-size: 12px;
   }
   .btn {
     width: 30%;
